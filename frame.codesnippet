@@ -3,29 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>getter</string>
+	<string>frame</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (&lt;#type#&gt;)&lt;#name#&gt;{
-    if (!_&lt;#name#&gt;){
-        _&lt;#name#&gt; = [[&lt;#type#&gt; alloc] init];
-    }
-    return _&lt;#name#&gt;;
-}</string>
+	<string>CGRectMake(&lt;#CGFloat x#&gt;, &lt;#CGFloat y#&gt;, &lt;#CGFloat width#&gt;, &lt;#CGFloat height#&gt;)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>32778166-9ED6-47DC-9D0B-15DFA3E053A9</string>
+	<string>DCBF9000-F659-49A5-A71A-A4B0DA88ECC3</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Implementation getter</string>
+	<string>Rect Frame</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Implementation getter</string>
+	<string>Rect Frame</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
