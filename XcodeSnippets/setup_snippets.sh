@@ -1,13 +1,6 @@
 #! /bin/bash
 echo "start setup XcodeSnippet"
 
-
-SRC_HOME=`pwd`
-# 先备份原来的snippets
-mv ~/Library/Developer/Xcode/UserData/CodeSnippets ~/Library/Developer/Xcode/UserData/CodeSnippets.backup
-cd ~/Library/Developer/Xcode/UserData/CodeSnippets
-rm -rf *
-
 function installXcodeSnippet()
 {
 	echo "start install snippet $1"
@@ -26,10 +19,21 @@ function installXcodeSnippet()
 	echo "install $1 snippet done"
 }
 
+SRC_HOME=`pwd`
+codeSnippetsPath=~/Library/Developer/Xcode/UserData/CodeSnippets
+if [ -d "${codeSnippetsPath}" ]; then
+	mv ${codeSnippetsPath} ${codeSnippetsPath}.backup
+    rm -r "${codeSnippetsPath}"
+fi
+mkdir -p "${codeSnippetsPath}"
+
+# 安装xcodesnippet
+if ! gem list | grep xcodesnippet > /dev/null; then 
+    gem install xcodesnippet
+fi
 
 installXcodeSnippet doc_snippets
 installXcodeSnippet usefulcode_snippets
-installXcodeSnippet tacode_snippets
 
 
 
